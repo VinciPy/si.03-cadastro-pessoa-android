@@ -11,6 +11,7 @@
         style="@style/ContainerComponents"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         tools:layout_editor_absoluteY="214dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
