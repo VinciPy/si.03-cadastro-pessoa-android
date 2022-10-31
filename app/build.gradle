@@ -1,10 +1,18 @@
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
     compileSdk 32
+
+    kapt {
+        arguments {
+            arg("room.schemaLocation", "$projectDir/schemas")
+        }
+    }
 
     defaultConfig {
         applicationId "com.example.main"
@@ -26,22 +34,20 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    kapt {
+        correctErrorTypes true
+    }
     kotlinOptions {
         jvmTarget = '1.8'
     }
 }
 
-apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android'
 
-
 dependencies {
-    def room_version = "2.4.3"
+    def room_version = "2.4.1"
     implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
