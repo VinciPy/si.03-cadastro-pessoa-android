@@ -13,24 +13,19 @@
         style="@style/ContainerComponents"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="116dp" />
+        tools:layout_editor_absoluteY="179dp" />
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="68dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_cadastrar"
         style="@style/Button"
         android:text="@string/cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="220dp" />
+        tools:layout_editor_absoluteY="280dp" />
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_Listar"
@@ -38,7 +33,7 @@
         android:text="@string/Lista"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="315dp" />
+        tools:layout_editor_absoluteY="372dp" />
 
     <ProgressBar
         android:id="@+id/progressbar"

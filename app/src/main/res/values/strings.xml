@@ -2,5 +2,6 @@
     <string name="app_name">Main</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="Lista">Listar</string>
+    <string name="titulo_cadastro">Cadastro</string>
 
 </resources>

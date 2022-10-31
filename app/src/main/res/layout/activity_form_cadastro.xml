@@ -4,6 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".FormCadastro">
+
+    <TextView
+        android:id="@+id/titulo_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_cadastro"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <View
+        android:id="@+id/containerComponentes"
+        style="@style/ContainerComponents"
+        android:layout_width="374dp"
+        android:layout_height="252dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_cadastro" />
+
+    <EditText
+        android:id="@+id/Nome_edit"
+        style="@style/Edit_Text"
+        android:hint="Nome:"
+        android:inputType="text"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/containerComponentes"
+        app:layout_constraintStart_toStartOf="@id/containerComponentes"
+        app:layout_constraintEnd_toEndOf="@id/containerComponentes"
+        />
+
+    <EditText
+        android:id="@+id/Data_nascimento_edit"
+        style="@style/Edit_Text"
+        android:hint="Data de nascimento:"
+        android:inputType="date"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/Nome_edit"
+        app:layout_constraintStart_toStartOf="@id/containerComponentes"
+        app:layout_constraintEnd_toEndOf="@id/containerComponentes"
+    />
+
+    <EditText
+        android:id="@+id/Descrição_edit"
+        style="@style/Edit_Text"
+        android:hint="Descrição:"
+        android:inputType="text"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/Data_nascimento_edit"
+        app:layout_constraintStart_toStartOf="@id/containerComponentes"
+        app:layout_constraintEnd_toEndOf="@id/containerComponentes"
+    />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Button"
+        android:layout_marginTop="30dp"
+        android:text="Cadastrar"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_dark"
+        app:layout_constraintTop_toBottomOf="@id/containerComponentes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
