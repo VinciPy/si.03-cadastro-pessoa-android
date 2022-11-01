@@ -1,6 +1,12 @@
 package com.example.main.Entities
 import androidx.room.Entity
-import java.util.*
+import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
+import java.time.LocalDate
 
-@Entity()
-data class User(val name: String, val description: String, val birthday: Date )
+@Entity(tableName = "user")
+data class User(
+    @PrimaryKey val uid: String,
+    val name: String,
+    val description: String,
+    @TypeConverters val birthday: String );
