@@ -19,5 +19,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
+        val buttonCadastro: Button = findViewById(R.id.bt_cadastrar);
+        buttonCadastro.setOnClickListener {
+            val intent: Intent = Intent(applicationContext, FormCadastro::class.java);
+            startActivity(intent);
+        }
+
     }
 }
