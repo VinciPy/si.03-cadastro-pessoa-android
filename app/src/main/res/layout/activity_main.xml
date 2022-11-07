@@ -8,14 +8,21 @@
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
-
     <View
         android:id="@+id/containerComponents"
         style="@style/ContainerComponents"
         android:layout_height="300dp"
         android:layout_centerVertical="true">
-
     </View>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/bt_cadastrar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/logo" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_cadastrar"
@@ -29,7 +36,6 @@
         android:id="@+id/bt_Listar"
         style="@style/Button"
         android:layout_alignParentBottom="true"
-
         android:layout_centerVertical="true"
         android:layout_marginBottom="226dp"
         android:text="@string/Lista" />
@@ -38,13 +44,15 @@
         android:id="@+id/progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="183dp"
+        android:layout_marginBottom="153dp"
         android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/containerComponents"
-        />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents" />
 
 
 </RelativeLayout>
