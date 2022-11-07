@@ -8,7 +8,7 @@ import com.example.main.DAOs.UserDao
 import com.example.main.Entities.User
 
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [User::class], version = 2)
 abstract class AppDatabase : RoomDatabase() {
 
     companion object {

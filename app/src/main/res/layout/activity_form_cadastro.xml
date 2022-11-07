@@ -67,6 +67,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         style="@style/Button"
+        android:id="@+id/ButtonSend"
         android:layout_marginTop="30dp"
         android:text="Cadastrar"
         android:textStyle="bold"

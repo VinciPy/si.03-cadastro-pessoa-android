@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
            val intent: Intent = Intent(applicationContext, List_people::class.java);
             startActivity(intent);
         }
-
         val buttonCadastro: Button = findViewById(R.id.bt_cadastrar);
         buttonCadastro.setOnClickListener {
             val intent: Intent = Intent(applicationContext, FormCadastro::class.java);

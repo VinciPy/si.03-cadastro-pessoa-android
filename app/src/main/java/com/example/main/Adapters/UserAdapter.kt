@@ -6,30 +6,32 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.example.main.Entities.User
 import com.example.main.R
 
-class UserAdapter(private val context: Context, private val dataSource: List<User>): BaseAdapter() {
-    private val inflater: LayoutInflater
-            = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+class UserAdapter(private val context: Context, private val dataSource: List<User>):
+    RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
-    override fun getCount(): Int {
-        return dataSource.count();
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
+        val view = LayoutInflater.from(context).inflate(R.layout.list_item_recipe, parent, false)
+        return UserViewHolder(view)
     }
 
-    override fun getItem(position: Int): Any {
-        return dataSource[position];
+    override fun getItemCount() = dataSource.size
+
+    override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
+        holder.bindView(dataSource[position])
     }
 
-    override fun getItemId(id: Int): Long {
-        return id.toLong();
-    }
-
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        var listView = inflater.inflate(R.layout.list_item_recipe, parent, false);
-        val user = getItem(position) as User;
-        val titleTextView = listView.findViewById(R.id.textViewNome) as TextView
-        titleTextView.text = user.name;
-        return listView;
+    class UserViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+        val textViewNome = itemView.findViewById<TextView>(R.id.textViewNome);
+        val textViewDescription = itemView.findViewById<TextView>(R.id.textViewDescrição);
+        val textViewBirthDay = itemView.findViewById<TextView>(R.id.textViewDatadenacimento);
+        fun bindView(user: User) {
+            textViewNome.text = user.name
+            textViewDescription.text = user.description;
+            textViewDescription.text = user.birthday;
+        }
     }
 }
